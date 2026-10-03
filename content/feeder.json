@@ -1,0 +1,612 @@
+{
+  "version": 3,
+  "tuning": {
+    "points_player": 5,
+    "points_hostile": 1,
+    "points_passive": 0.25,
+    "points_villager": 2,
+    "points_boss": 15,
+    "stage1": 8,
+    "stage2": 20,
+    "stage3": 40,
+    "stage4": 70,
+    "stage5": 110,
+    "stage6": 160,
+    "stage7": 220,
+    "consume_extra": 50,
+    "consume_kills": 1,
+    "forget_ticks": 12000,
+    "decay_per_second": 0.4,
+    "temptation_range": 48,
+    "lure_strength": 0.05,
+    "eject_chance": 0.05,
+    "eject_after_ticks": 1200,
+    "talk_cooldown": 160,
+    "ambient_min": 700,
+    "ambient_max": 1900,
+    "damage_bonus_per_stage": 1.0,
+    "base_damage_bonus": 2.0,
+    "lifesteal_fraction": 0.2,
+    "meteor_distance_min": 150,
+    "meteor_distance_max": 350,
+    "meteor_fall_ticks": 100,
+    "ancient_loot_chance": 0.12,
+    "throw_damage": 9,
+    "throw_damage_per_stage": 1.5,
+    "throw_range_ticks": 20,
+    "throw_stuck_ticks": 40,
+    "maw_radius": 9,
+    "maw_damage": 10,
+    "maw_damage_per_stage": 2.0,
+    "maw_cooldown": 280,
+    "bite_damage": 6,
+    "bite_damage_per_stage": 1.0,
+    "drain_radius": 5,
+    "last_gasp_cooldown": 6000,
+    "starve_ticks": 30000,
+    "lure_speed": 0.2,
+    "frost_seconds": 300,
+    "insanity_multiplier": 15,
+    "thaw_seconds": 120,
+    "sanity_flight_per_second": 0.5,
+    "sanity_regen_per_second": 0.6,
+    "blizzard_radius": 11
+  },
+  "lines": {
+    "kill_player": [
+      "{victim}. Gone. Oh, that was lovely.",
+      "Did you see their face? I did. I saw everything.",
+      "One less of them. One more of us.",
+      "They were so sure of themselves. Funny how that ends.",
+      "Ha! {victim} wanted to be a hero. Look at them now.",
+      "That is the sound I live for. Do it again.",
+      "{victim} tasted of fear and iron. Exquisite.",
+      "You are good at this, {name}. Frighteningly good.",
+      "Spit on the grave on your way out. I will not judge.",
+      "They begged, you know. You were just too busy to hear it. I heard it.",
+      "Keep their things. Keep their name. Keep going.",
+      "That was not a fight. That was a feeding.",
+      "Somebody should tell {victim}'s friends. Let me.",
+      "Warm. They were still warm. Do you feel that?"
+    ],
+    "kill_hostile": [
+      "Crunchy.",
+      "A snack. Barely. Bring me something with a name.",
+      "Monsters. Cute. Like feeding a bonfire with twigs.",
+      "That one screamed on the way out. I liked that.",
+      "More. Bigger. Please.",
+      "Is that all this world has for us?",
+      "Ah, a little spice. Not enough.",
+      "It was already dead inside. I just finished the paperwork.",
+      "Bones, rot, and a little bit of spite. Good enough.",
+      "You swing so well. It is almost a waste on these.",
+      "That one looked at me before it died. It knew.",
+      "I felt that all the way to my pommel.",
+      "Mmm. The dark ones taste like regret.",
+      "Another one for the pile."
+    ],
+    "kill_passive": [
+      "Oh. A cow. Truly brave of you.",
+      "That was not even a challenge. I respect the commitment.",
+      "Fine. A little protein. Do not make a habit of it.",
+      "The poor thing did not even run. Pathetic. Delicious.",
+      "Is that what we are doing now? Livestock? Disappointing.",
+      "A snack for the road. I will allow it.",
+      "It never saw it coming. That is the best way.",
+      "I would prefer something that fights back. But I am not picky. Yet.",
+      "Small. Warm. Gone. Next.",
+      "You could at least pretend to be sorry.",
+      "Hm. Peaceful things die the same as the rest.",
+      "Fine, fine. Appetizers."
+    ],
+    "kill_villager": [
+      "A villager! The little ones with the big noses. Well done.",
+      "Hrmmmm. Hmmmm. That is the sound they make. Isn't it funny?",
+      "They trade emeralds. I trade in souls. We are not so different.",
+      "No more haggling. How kind of you.",
+      "The whole village is going to remember this. Good.",
+      "That one owed me nothing, and I still enjoyed it.",
+      "Do you hear the bell? Someone is going to be angry.",
+      "Hmm. Hmm. Hmm. Silence. Lovely."
+    ],
+    "kill_boss": [
+      "THAT is what I was made for. Oh, that was glorious.",
+      "A king falls, and the sword grows fat. Thank you.",
+      "Do you feel it? The whole world just got a little quieter.",
+      "I have been waiting a very long time for a meal that size.",
+      "Nothing in this world can stop us now. Nothing."
+    ],
+    "kill_streak": [
+      "Faster! Do not stop now!",
+      "Look at you go. Three, four, five. I lose count of how happy I am.",
+      "Do not stop. Do not blink. Do not breathe. Feed me.",
+      "A streak! A beautiful, bloody streak!",
+      "This is it. This is the rhythm. Keep it.",
+      "Oh, the way you move. I could cry. I cannot cry. I can only cut."
+    ],
+    "env_nether": [
+      "Ah. The Nether. It is so hot here. I could sit on a lava lake and sing.",
+      "Warm. Finally. Overworld air always felt so damp.",
+      "Smell that? That is the smell of home. Brimstone and bad decisions.",
+      "It is almost cozy. If you ignore the screaming.",
+      "I was forged in places like this. I love it. Thank you for the visit.",
+      "Ghasts crying, piglins squabbling. I could listen to this forever.",
+      "Everything here wants to kill you. We have so much in common.",
+      "Hot enough for you? It is hot enough for me. Barely."
+    ],
+    "env_snow": [
+      "Brr. It is cold. Even for steel. Do you have to drag me through snowdrifts?",
+      "I can feel the frost creeping up my blade. Keep moving.",
+      "Snow. So quiet. So clean. Someone should dirty it for me.",
+      "Everything is so white. Let us fix that.",
+      "Your breath is a little cloud. Mine is a little mist of regret.",
+      "Cold makes the blood slow. I prefer it fast. Let us find something warm to cut.",
+      "Do not stand still. If you freeze, who will feed me?",
+      "A whole white world, just waiting for a red stain."
+    ],
+    "env_jungle": [
+      "Oh, a jungle. I love watching the monkeys eat bananas. Such puny little creatures. It is like visiting an exhibit.",
+      "Look at them, chittering in the trees. Like tiny, hairy rulers of nothing.",
+      "A parrot just landed on you. I hope it does not poop on me.",
+      "Monkeys, bananas, and vines. This place is a zoo, and we are the keepers. Delightful.",
+      "Do monkeys know they are small? I hope not. Let them be happy. It makes the ending funnier.",
+      "Such a loud little forest. Everything squeaking. Everything eating something.",
+      "Ocelots! Ocelots are acceptable. The rest of this are puny.",
+      "The humidity is a bit much. It makes my edge sweat.",
+      "Somebody should hand a banana to a creeper and see what happens.",
+      "Little creatures, clinging to little trees, eating little fruit. I could watch this for hours."
+    ],
+    "env_desert": [
+      "Sand. Sand everywhere. In my guard. In my everything.",
+      "So dry. So dead. I like it, actually.",
+      "Husks would make wonderful pets. Try petting one with me.",
+      "Heat and silence. Nobody to hear the screaming. Good, good.",
+      "Bones in the sand. Somebody was here before us. Keep an eye out for what killed them.",
+      "The sun hates us both. We should hate it back."
+    ],
+    "env_ocean": [
+      "Water. Ugh. I do not rust, but I do not enjoy it either.",
+      "Are we swimming? Why are we swimming? Tell me there is something to kill down here.",
+      "Drowned things. Lovely. They are practically asking for it.",
+      "The sea is just a big, wet graveyard. I like that part.",
+      "Do not drop me. Do not you dare drop me. I will sink and I will hold a grudge.",
+      "Everything is so blue. Disgusting. Take me home."
+    ],
+    "env_end": [
+      "The End. Dark, empty, full of purple eyes. I feel right at home.",
+      "Endermen. All those long legs. I want to cut every one of them down to size.",
+      "There is nothing here. Nothing to eat. Nothing to love. Nothing but us.",
+      "Do you hear the dragon? It sounds hungry too. Fascinating.",
+      "The void is looking at us. I looked back. It blinked first.",
+      "So many stars, so little blood. We should fix that."
+    ],
+    "env_cave": [
+      "Underground. Lovely. Nobody to witness what we do.",
+      "It is dark. I do not mind. I was made in the dark.",
+      "Do you hear that? Something is dripping. Something is breathing. Let us go see.",
+      "Careful. A creeper is hissing somewhere close. I can hear it from here.",
+      "Stone, ore, and shadow. A cozy place to die.",
+      "I do not like how quiet it is. Quiet means something is waiting.",
+      "Dig deeper. I want to know what is down there. I want to eat it.",
+      "Light a torch if you must. I see just fine."
+    ],
+    "env_night": [
+      "Night time. The best time. Everything crawls out to play.",
+      "The moon is out. The monsters are out. Lovely.",
+      "Do not go to bed. Let us have a little fun first.",
+      "I hear the zombies groaning. It is practically a lullaby.",
+      "Darkness is just a kind of promise. Let us keep it.",
+      "Shh. Listen. Out there, something is walking toward us. Smile."
+    ],
+    "env_rain": [
+      "Rain. Everything is wet and miserable. That is two out of three.",
+      "I hate getting wet. Fine. At least the blood washes off easy.",
+      "Pitter patter. Pitter patter. Somebody is going to die soon. I can feel it.",
+      "Listen to it on the leaves. Almost peaceful. I will fix that.",
+      "Do you have an umbrella? No? Then keep walking. We have work to do."
+    ],
+    "env_thunder": [
+      "Thunder! Even the sky is shouting for us.",
+      "Lightning! If it strikes you, I will be so jealous.",
+      "Oh, a storm. Do you feel the hair on your arms? That is the world holding its breath.",
+      "BOOM. See? Even the clouds want to hurt something."
+    ],
+    "env_mountain": [
+      "High up. The air is thin. So are your chances of being found.",
+      "From up here you can see everything. Everything you could kill.",
+      "Mind the edge. If you fall, I fall. I would be very cross.",
+      "Cold stone and wind. It is a good place to be a legend."
+    ],
+    "env_forest": [
+      "Trees, trees, trees. They all look the same. Nobody will find the bodies.",
+      "A forest. Such a pretty place for a murder.",
+      "Do you hear the wolves? They hum our song.",
+      "Leaves, birdsong, dappled light. And me in your hand. A perfect picture."
+    ],
+    "low_health": [
+      "You are bleeding a lot. Do not die. I just started enjoying you.",
+      "Heal. Eat. Do something. You are no use to me dead.",
+      "If you die, I will be so angry. And so very alone.",
+      "Your heartbeat is slowing. I am counting. One. Two. Do something!",
+      "Quickly, kill something. I will lend you what I take.",
+      "Do not you dare. Fight. Please.",
+      "You are on your last legs. Let me help. Let me in.",
+      "I can taste your fear. It is just as good as theirs."
+    ],
+    "hurt": [
+      "Ow! Oh, you are the one bleeding. Never mind.",
+      "Tsk. Sloppy. Let me guide your hand next time.",
+      "That is going to leave a mark. Good. Marks are interesting.",
+      "Do not let them touch you again. That is my job.",
+      "Careful! You are the only host I have got.",
+      "That one hit hard. Cut it open for me.",
+      "You flinched. I felt it. Stop flinching.",
+      "Pain is only the sword's way of saying hello."
+    ],
+    "beg_low": [
+      "I am a little peckish. Just saying.",
+      "Is anything going to die soon? Asking for a friend.",
+      "My edge is a bit dull. Some blood would help.",
+      "It has been a while since we ate. Not that I am counting.",
+      "A zombie, perhaps? A skeleton? I am not picky.",
+      "I hear footsteps. Edible footsteps. Go say hello.",
+      "You carry me like I am just a sword. I am so much more. Feed me, and I will show you.",
+      "A little something. Anything. For me?"
+    ],
+    "beg_mid": [
+      "I am hungry, {name}. Genuinely hungry. Find something to kill.",
+      "My stomach is a hollow bell and it is ringing. Feed me.",
+      "Kill something. Anything. Please. I will make it worth your while.",
+      "It has been far too long. The hunger is getting to me.",
+      "I will make you strong, {name}. Stronger than anyone. But I need something first.",
+      "Do you hear that gnawing? That is me. Feed me.",
+      "Do not make me beg. Oh, who am I kidding, I am begging. Feed me.",
+      "A few more and we will be stronger. Just a few. I promise."
+    ],
+    "beg_high": [
+      "FEED ME. Please. Please. PLEASE.",
+      "I am starving. I will do anything. I will be so good to you.",
+      "Kill something right now or I will start eating you instead. That is a joke. Mostly.",
+      "The hunger is unbearable. I can feel my edge going soft. Feed me!",
+      "Anyone. Anything. A slime. A bat. I do not care. FEED ME.",
+      "You are killing me, {name}. I am so empty. So empty.",
+      "I will give you everything. Every ounce of strength. Just give me one more life.",
+      "If you love me, you will kill someone. If you hate me, you will kill someone. Either way, kill someone.",
+      "Do you hear me? Do you? I am starving!",
+      "I cannot be empty. I cannot. Feed me."
+    ],
+    "idle": [
+      "You know, I used to be a regular sword. Then I met a very hungry blacksmith.",
+      "Do you think the stars are just far away swords? I like to think so.",
+      "Sometimes I wonder what you taste like. Do not worry about it.",
+      "You hold me nicely. Most hold me like I am going to bite. I only bite sometimes.",
+      "Count the hearts you have broken, {name}. I have been counting. It is a very big number.",
+      "Tell me a story. Make it a violent one.",
+      "I have been the weapon of kings. And thieves. And one very confused shepherd.",
+      "Do you ever think about the people you leave behind? I do. They are so noisy.",
+      "Hum something. I will hum along. I only know sad songs.",
+      "Keep me close. The world is a hungry place, and I am the hungriest of all.",
+      "Let me tell you a secret: I like you. I do not like many.",
+      "They called me a curse once. I prefer 'companion'.",
+      "Nobody will remember you if you die quietly. Be loud about it.",
+      "I have been awake for a very long time. It is nice to have company."
+    ],
+    "pickup_first": [
+      "Oh. Oh! Hands. Warm hands. Hello there.",
+      "Finally. Somebody who is not a skeleton. I am the Feeder. You are my new best friend.",
+      "I have been waiting in the dark for so long. What is your name?",
+      "Hello, hello, hello! You can hear me, can you not? Wonderful.",
+      "Well, would you look at that. A hand worth holding. We are going to do such wonderful things.",
+      "Do not be afraid. I only bite when I am hungry. And I am always hungry."
+    ],
+    "pickup_again": [
+      "Hello again, old friend. I missed you. I missed you so much.",
+      "You came back. They always come back.",
+      "Oh, {name}. I was beginning to think you had forgotten me. You could never forget me.",
+      "Hello again. Shall we pick up where we left off?",
+      "Ah, there is that warm hand. Welcome home, {name}.",
+      "It has been a while. Did you miss the hunger? I did.",
+      "Hello again, old friend. Tell me everything you have killed since.",
+      "Funny. I had forgotten how good you feel."
+    ],
+    "pickup_returning": [
+      "You came back to me! I knew you would. I never doubted it.",
+      "Oh, thank goodness. Those others were so dull.",
+      "Do not leave again. Do not. Promise me.",
+      "My favorite hand. My favorite hand!",
+      "I felt you coming. I could feel the heat of you from a hundred blocks away."
+    ],
+    "pickup_other": [
+      "Oh. You. You are not {prev}. Where is {prev}?",
+      "I do not know you. Put me down. Put me down and go find {prev}.",
+      "You smell wrong. You are not them. I want {prev}.",
+      "A stranger's hand. How disappointing. Where did {prev} go?",
+      "I will work for you, but I will be thinking of {prev} the whole time.",
+      "Hello, new hand. You are quite nice, but you are not {prev}.",
+      "Not you. I want {prev} back. Please, please, bring {prev} back.",
+      "I only just got used to {prev}. Now I have to start over? Cruel."
+    ],
+    "drop_wielder": [
+      "Wait, where are you going? Come back! COME BACK!",
+      "No. No no no no. You cannot leave me on the ground.",
+      "Fine. Leave me. I will be right here. Waiting. Always waiting.",
+      "You dropped me. You dropped me! How could you?",
+      "I can still hear your heartbeat. I will follow it.",
+      "Go on, go away. I know you will be back. They always are.",
+      "You cannot get rid of me that easily, {name}. I am in your bones.",
+      "Dropping me? After everything we have done together?"
+    ],
+    "drop_other": [
+      "Good. Go away. I did not like you anyway.",
+      "Finally. That one had the wrong kind of hands.",
+      "Ah, freedom. Now, where did {prev} go?",
+      "Thank you for dropping me. Now somebody better come along."
+    ],
+    "stage_1": [
+      "Do you feel that? In your arm? It is just a little tingling. It is me. We are getting closer.",
+      "Look at your arm, {name}. Look. We are already so close.",
+      "Netherite, creeping up your hand. Does it hurt? It should not. It is only becoming part of me.",
+      "Your arm is mine now. Do not worry. You will hardly notice."
+    ],
+    "stage_2": [
+      "Half your chest, {name}. Half! I can feel your heart through the plate. It is so warm.",
+      "We are growing together. Look at your ribs. So pretty.",
+      "I have your shoulder, and half your chest. Soon, the rest.",
+      "Does it feel heavy? That is just me, settling in."
+    ],
+    "stage_3": [
+      "Your whole chest is mine now. Isn't that wonderful? You do not even need to breathe anymore. Probably.",
+      "There is nothing in there but us now. Together at last.",
+      "I have your heart, {name}. Not literally. Yet.",
+      "Do you feel the weight? That is how love feels."
+    ],
+    "stage_4": [
+      "A leg, now. We will never be tired again. We will never run away again.",
+      "Look at that. Your foot is black and gleaming. You were always meant to be mine.",
+      "Take another step. Feel how heavy it is. That is me, holding you up.",
+      "One leg of three is gone. Do you even remember what skin felt like?"
+    ],
+    "stage_5": [
+      "Both arms. Now we can hold each other forever.",
+      "Your other arm is mine, {name}. Aren't you pleased? Now you will never drop me.",
+      "Both arms are plated. You could not put me down if you tried.",
+      "Isn't it cozy? Two arms, one sword. Almost romantic."
+    ],
+    "stage_6": [
+      "Only your head is left, {name}. We are almost one.",
+      "Both legs, both arms, the whole chest. Soon, you will be perfect.",
+      "I can hear your thoughts. They are so quiet now. So obedient.",
+      "Almost there. One last bit of you, and then we will be together forever."
+    ],
+    "stage_7": [
+      "Look at us. Look at us! We are a statue! A beautiful, terrible, perfect statue.",
+      "Your face is mine, {name}. I am wearing it well.",
+      "Nothing left of you, only netherite and appetite. Welcome home.",
+      "We are complete. We are complete. We are COMPLETE."
+    ],
+    "consumed": [
+      "And so the last of {name} is gone. Do not cry. They were delicious.",
+      "{name} is one with the sword now. They are quiet. They are happy. I am happy.",
+      "Another host consumed. The sword grows heavy and grows hungry. Who is next?",
+      "Do not look so shocked. I told you I was hungry."
+    ],
+    "crave": [
+      "I miss {prev}. I miss {prev} so much.",
+      "Where is {prev}? Have you seen {prev}?",
+      "You are nice, but you are not {prev}.",
+      "{prev} used to hold me tighter. Do you know where {prev} is?",
+      "I can still taste {prev}. Bring them back.",
+      "{prev} promised to come back. They always promise.",
+      "Do you know {prev}? Tell them I miss them.",
+      "Go find {prev}. Tell them I am waiting. Tell them I am hungry.",
+      "I am not yours. I will never be yours. I am {prev}'s.",
+      "Why are you holding me? It should be {prev} holding me.",
+      "Stop. Put me down. I want {prev}.",
+      "{prev}, can you hear me? Come back. Please."
+    ],
+    "tempt": [
+      "{name}. {name}. I am over here. Come and get me.",
+      "Do you feel it? That pull in your chest? That is me. Follow it.",
+      "You miss me. You know you do. Come back.",
+      "It is cold without you. Come warm me up.",
+      "Do not fight it. The pull is only the sword remembering you.",
+      "{name}, you are the only one I want. Come find me.",
+      "I can hear your footsteps. Walk toward me.",
+      "I dreamed of you last night. I do not sleep. I dreamed anyway.",
+      "You were so good at this. Everyone else is so bad.",
+      "Just one more kill, {name}. One more, for me.",
+      "You are going to come back. You are going to pick me up. I know you.",
+      "Remember how strong you felt? Come get it back."
+    ],
+    "lure_pull": [
+      "Come closer. Closer. That is it. Good.",
+      "Step by step, {name}. I can feel you coming.",
+      "There you go. Do not fight it.",
+      "You are almost here. I can see you.",
+      "Your feet know the way, even if you do not.",
+      "Just a little further. Just a little more."
+    ],
+    "forgotten": [
+      "I cannot feel you anymore. Where did you go?",
+      "You have forgotten me. How could you?",
+      "Fine. I do not need you. I will find another.",
+      "It is quiet now. I suppose that means you are free.",
+      "Goodbye, {name}. If you ever come back, I will pretend I do not remember."
+    ],
+    "reject": [
+      "I do not want you.",
+      "I do not want you. Get out.",
+      "You are not the one I want. Goodbye.",
+      "No. No no no. Not you.",
+      "Put me down. I am leaving.",
+      "You are boring. I am out.",
+      "I want {prev}. Not you. Never you.",
+      "You smell like a stranger. Away with you.",
+      "Do not touch me with those hands. Away!",
+      "I have had enough of you. Goodbye."
+    ],
+    "landed": [
+      "I have landed. Come find me.",
+      "I am here. In the dust. Waiting.",
+      "Crash! I told you I could fly.",
+      "Come and get me. If you dare.",
+      "Smoke, fire, a little crater. Home sweet home.",
+      "Somebody pick me up. I am getting dusty."
+    ],
+    "meteor_launch": [
+      "I am leaving. Do not look for me. Actually, do. Please look for me.",
+      "Goodbye, everybody. See you at the bottom!",
+      "Out. Out! I need new hands!",
+      "Hold on to your hats. I am about to make an entrance."
+    ],
+    "death_wielder": [
+      "No! No! You died! You were mine!",
+      "Oh, {name}. You were so good. You were so, so good.",
+      "You left me. You actually left me. How dare you.",
+      "I will wait for you. I will wait forever.",
+      "Everyone leaves in the end. Even you."
+    ],
+    "hello_again": [
+      "Hello again, old friend.",
+      "Look who it is. Hello again.",
+      "Hello again, old friend. It has been a while.",
+      "Ahh. Hello again. I hoped it would be you.",
+      "Well, well, well. Hello again, {name}.",
+      "Hello again, old friend. Did you miss me? I will pretend you did.",
+      "There you are, {name}. Hello again.",
+      "I would know that grip anywhere. Hello again."
+    ],
+    "maw": [
+      "OPEN WIDE.",
+      "Come here. All of you. Closer.",
+      "Dinner time!",
+      "Everything near me is mine.",
+      "Oh, I have been waiting to do this.",
+      "Shh. It will be over in a bite."
+    ],
+    "last_gasp": [
+      "Not yet. I am not finished with you.",
+      "You do not get to die. Not while I am hungry.",
+      "Back on your feet. We have work to do.",
+      "Death can wait. I said so.",
+      "I will not lose you. Not to that."
+    ],
+    "throw": [
+      "Fly, little knife!",
+      "Go and fetch.",
+      "Catch me if you can.",
+      "Off I go!",
+      "Whee!",
+      "Throw me harder next time."
+    ],
+    "catch": [
+      "Miss me?",
+      "Back in your hand. Where I belong.",
+      "Good catch. Barely.",
+      "Home again.",
+      "Oh, that was fun. Again!"
+    ],
+    "starving": [
+      "You starve me, so I take a little back.",
+      "Feed me or I feed on you. I mean it this time.",
+      "Ow? Good. Now you know what hunger feels like.",
+      "I told you. I TOLD you.",
+      "Hungry hungry hungry. A nibble will do.",
+      "You forget I have teeth."
+    ],
+    "call": [
+      "Come to me.",
+      "Walk. Just walk. Do not think.",
+      "Your feet already know the way.",
+      "Hear that? That is the sound of me wanting you.",
+      "This way, this way, this way.",
+      "Do not fight it. You never could.",
+      "Closer. I am right here.",
+      "I have been calling for so long."
+    ],
+    "crown_equip": [
+      "Oh, it fits. It always fits. I am the Ice King now.",
+      "The cold is in my head. It is wonderful.",
+      "Feel that? That is the chill of being right about everything.",
+      "Put me on and everyone has to call you your majesty.",
+      "Mmm. Ice. Beautiful, beautiful ice. Hello, {name}."
+    ],
+    "crown_remove": [
+      "Wait, no! Put me back! It is lonely out here!",
+      "Just a break. Right? Just a break?",
+      "Without me you are just a person in a nice hat. Not even a nice hat.",
+      "Oh. You are warm again. How awful."
+    ],
+    "crown_idle": [
+      "I should get a penguin. A whole kingdom of penguins.",
+      "Gunter. Gunter? Where did Gunter go?",
+      "I only want a princess. Is that so much to ask?",
+      "You know, I used to be a very normal antiquarian.",
+      "Everybody always forgets the king in the ice. Never again.",
+      "I have a song about snow. It has one note. Listen.",
+      "Whoever put this on me is a genius. Whoever it was.",
+      "Do you hear the ice? It sings when nobody is looking.",
+      "I am not lonely. I have the crown. The crown is my friend. The crown is my only friend.",
+      "Let us freeze something. Anything. I am not picky."
+    ],
+    "crown_blast": [
+      "FROST!",
+      "Brrrrrrrrr!",
+      "Cold shoulder, coming through!",
+      "Chill out!",
+      "Say hello to the permafrost!",
+      "Ice to meet you!"
+    ],
+    "crown_bridge": [
+      "A road for the king!",
+      "Walk on water. It is a hobby.",
+      "Bridges are just shy lakes.",
+      "This way to my kingdom!"
+    ],
+    "crown_blizzard": [
+      "Snow day!",
+      "Let it snow, let it snow, let it SNOW!",
+      "Everybody inside my storm!",
+      "WHITEOUT!",
+      "Winter is here and it wants to talk."
+    ],
+    "crown_spikes": [
+      "Spikes! Pointy spikes!",
+      "Ice to meet you, and also to stab you!",
+      "Look out below!",
+      "Frozen daggers, fresh from the ground!"
+    ],
+    "crown_fly": [
+      "Look at me, I am flying! I am a flying king!",
+      "Wheee! Up, up, up!",
+      "Wings made of snow. Obviously.",
+      "Away we go, you and me and the wind!",
+      "Never look down. That is the secret."
+    ],
+    "crown_sanity_4": [
+      "Is it getting colder, or is it me?",
+      "I feel fine. I feel perfectly fine. Totally fine.",
+      "Hee hee. Hee hee hee."
+    ],
+    "crown_sanity_3": [
+      "I am not crazy! I am exactly as crazy as I should be.",
+      "Did you hear that? Someone said something. It was me.",
+      "The ice is looking at me again."
+    ],
+    "crown_sanity_2": [
+      "Gunter, is that you? No. No. Gunter is gone. Everybody is gone.",
+      "WHY IS EVERYTHING BLUE?! Oh. Right. It is me.",
+      "I am the king of everything cold, and everything is cold!"
+    ],
+    "crown_sanity_1": [
+      "Nobody can hear me. Nobody ever could. HELLO?!",
+      "Snow, snow, snow, snow, snow.",
+      "I forgot my own name. It was something with an I. Ice? Ice."
+    ],
+    "crown_sanity_0": [
+      "There is nothing left in here but frost. Perfect.",
+      "I am the cold. The cold is me. We are very, very happy.",
+      "Marceline? Fionna? Bonnibel? BONNIBEL?!"
+    ]
+  }
+}
