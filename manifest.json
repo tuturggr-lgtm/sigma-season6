@@ -1,8 +1,8 @@
 {
-  "version": "0.10.2",
+  "version": "0.10.5",
   "jar": {
-    "url": "https://raw.githubusercontent.com/tuturggr-lgtm/sigma-season6/main/sigma-0.10.2.jar",
-    "sha256": "a7f83d9c2222ed6dd5377c46fd0b77125b765dbef009bacd479ae67e65fd1285"
+    "url": "https://raw.githubusercontent.com/tuturggr-lgtm/sigma-season6/main/sigma-0.10.5.jar",
+    "sha256": "2f60e9e92b4ddbe319131747dc46917196a1970e4486ca2ca08b56295dcc2b16"
   },
   "files": [
     {
